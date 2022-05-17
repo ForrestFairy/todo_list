@@ -8,4 +8,10 @@ defmodule TodoListWeb.PageLiveTest do
     assert disconnected_html =~ "Welcome to Phoenix!"
     assert render(page_live) =~ "Welcome to Phoenix!"
   end
+
+  test "todo_list site shows title", %{conn: conn} do
+    {:ok, page_live, disconnected_html} = live(conn, "/todo_list")
+    assert disconnected_html =~ "Todo List"
+    assert render(page_live) =~ "Todo List"
+  end
 end

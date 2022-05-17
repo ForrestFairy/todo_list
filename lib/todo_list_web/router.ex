@@ -19,7 +19,7 @@ defmodule TodoListWeb.Router do
 
     live "/", PageLive
     live "/light", LightLive
-    live "/todo", TodoLive
+    live "/todo_list", TodoListLive
   end
 
   # Other scopes may use custom stacks.
